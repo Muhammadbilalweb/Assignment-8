@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadcnblocks.com</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #111;
+        }
+
+        nav {
+            height: 275px;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 24px 13px 24px;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .cube {
+            width: 15px;
+            height: 15px;
+            background: #111;
+            clip-path: polygon(
+                50% 0%,
+                100% 25%,
+                100% 75%,
+                50% 100%,
+                0% 75%,
+                0% 25%
+            );
+            position: relative;
+        }
+
+        .cube::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: white;
+            top: 4px;
+            left: 4px;
+            clip-path: polygon(
+                50% 0%,
+                100% 25%,
+                100% 75%,
+                50% 100%,
+                0% 75%,
+                0% 25%
+            );
+        }
+
+        /* Center Menu */
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-left: 90px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #111;
+            font-size: 10px;
+        }
+
+        .dropdown {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .arrow {
+            font-size: 9px;
+            color: #777;
+        }
+
+        /* Right Side */
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .login {
+            font-size: 10px;
+            text-decoration: none;
+            color: #111;
+        }
+
+        .signup {
+            background: #171717;
+            color: white;
+            text-decoration: none;
+            font-size: 10px;
+            padding: 7px 13px;
+            border-radius: 4px;
+        }
+
+        .signup:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <div class="cube"></div>
+                <span>Shadcnblocks.com</span>
+            </div>
+
+            <!-- Center Menu -->
+            <div class="menu">
+
+                <a href="#" class="dropdown">
+                    Products
+                    <span class="arrow">⌄</span>
+                </a>
+
+                <a href="#" class="dropdown">
+                    Company
+                    <span class="arrow">⌄</span>
+                </a>
+
+                <a href="#">Contact</a>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="right">
+                <a href="#" class="login">Log in</a>
+                <a href="#" class="signup">Sign up</a>
+            </div>
+
+        </div>
+    </nav>
+
+</body>
+</html>
